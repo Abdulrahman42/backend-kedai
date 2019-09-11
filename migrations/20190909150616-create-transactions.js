@@ -20,7 +20,7 @@ module.exports = {
       discount: {
         type: Sequelize.DOUBLE
       },
-      seviceCharge: {
+      serviceCharge: {
         type: Sequelize.DOUBLE
       },
       tax: {

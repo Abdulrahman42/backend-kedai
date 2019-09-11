@@ -20,13 +20,15 @@ app.group("/api/v1", (router) => {
     router.post('/transaction', transactionController.store)
     router.get('/transactions', transactionController.index)
     router.get('/transaction/:id', transactionController.show)
-    router.post('/transaction/:id', transactionController.patch)
+    router.patch('/transaction/:id', transactionController.update)
+    // router.post('/orderbytransaction', transactionController.s)
 
     //API ORDER
     router.post('/order', orderController.store)
     router.get('/orders', orderController.index)
     router.get('/order/:id', orderController.show)
-    // router.post('order/:id', orderController.patch)
+    router.get('/order/transaction/:id', orderController.getByTransId)
+    router.patch('/order/:id', orderController.update)
 
     //API CATEGORY
     router.get('/categories', categoryController.index)
