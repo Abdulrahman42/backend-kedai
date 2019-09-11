@@ -37,6 +37,7 @@ app.group("/api/v1", (router) => {
     router.get('/menus', menuController.indexAll)
     router.get('/menus/:id', menuController.index)
     router.get('/menu/:id', menuController.show)
+    router.post('/menu', menuController.store)
     
 })
 
