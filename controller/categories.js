@@ -15,7 +15,7 @@ exports.index = (req, res) =>{
 exports.show = (req, res) => {
     const id = req.params.id
 
-    categories.findOne({
+    Category.findOne({
         where: { id }, include: [{
             model: menu
         }]
@@ -33,7 +33,7 @@ exports.show = (req, res) => {
 exports.store = (req, res) => {
     const data = req.body
     console.log(data)
-    categories.create(data)
+    Category.create(data)
         .then(categories => res.status(201).send(categories))
         .catch(err => res.status(400).send(err))
 }

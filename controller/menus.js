@@ -18,7 +18,7 @@ exports.indexAll = (req, res) => {
 exports.show = (req, res) => {
     const id = req.params.id
 
-    menu.findOne({ where: { id } })
+    Menu.findOne({ where: { id } })
         .then(menu => {
             if (menu) {
                 return res.status(200).send(menu)
@@ -32,7 +32,7 @@ exports.show = (req, res) => {
 exports.store = (req, res) => {
     const data = req.body
     console.log(data)
-    menu.create(data)
+    Menu.create(data)
         .then(menu => res.status(201).send(menu))
         .catch(err => res.status(400).send(err))
 }
