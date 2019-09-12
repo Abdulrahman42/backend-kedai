@@ -3,7 +3,7 @@ module.exports = (sequelize, DataTypes) => {
   const transactions = sequelize.define('transactions', {
     tableNumber: DataTypes.INTEGER,
     finishedTime: DataTypes.STRING,
-    subtotal: DataTypes.DOUBLE,
+    subTotal: DataTypes.DOUBLE,
     discount: DataTypes.DOUBLE,
     serviceCharge: DataTypes.DOUBLE,
     tax: DataTypes.DOUBLE,
